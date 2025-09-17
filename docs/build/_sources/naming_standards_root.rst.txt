@@ -1,21 +1,21 @@
 naming_standards (root)
 =======================
 
-naming_standards.colname
-------------------------
+colname
+-------
 
-.. automodule:: naming_standards.colname
+.. automodule:: colname
    :members:
 
-naming_standards.lists
-----------------------
+lists
+-----
 
-.. automodule:: naming_standards.lists
+.. automodule:: lists
    :members:
 
-naming_standards.tablename
---------------------------
+tablename
+---------
 
-.. automodule:: naming_standards.tablename
+.. automodule:: tablename
    :members:
 

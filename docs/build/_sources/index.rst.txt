@@ -38,7 +38,9 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   naming_standards_root
+   colname
+   lists
+   tablename
 
 
 Release History

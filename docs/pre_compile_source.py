@@ -26,7 +26,7 @@ def filepath_to_module(filepath, base_dir):
     module_path = module_path.replace(os.path.sep, ".")
     return main_package_name + "." + module_path
 
-# --- Group modules by top-level subfolder ---
+# --- Group modules by top-level subfolder or filename ---
 from collections import defaultdict
 subfolder_modules = defaultdict(list)
 for f in python_files:
@@ -35,7 +35,7 @@ for f in python_files:
     if len(parts) > 1:
         subfolder = parts[0]
     else:
-        subfolder = "(root)"
+        subfolder = os.path.splitext(parts[0])[0]  # Use filename (without .py) for root files
     mod = filepath_to_module(f, absolute_directory)
     subfolder_modules[subfolder].append(mod)
 
@@ -44,12 +44,8 @@ rst_dir = os.path.join("source")
 os.makedirs(rst_dir, exist_ok=True)
 subfolder_rst_files = []
 for subfolder, mods in sorted(subfolder_modules.items()):
-    if subfolder == "(root)":
-        rst_filename = f"{main_package_name}_root.rst"
-        section_title = f"{main_package_name} (root)"
-    else:
-        rst_filename = f"{subfolder}.rst"
-        section_title = subfolder
+    rst_filename = f"{subfolder}.rst"
+    section_title = subfolder
     rst_path = os.path.join(rst_dir, rst_filename)
     subfolder_rst_files.append(rst_filename)
     with open(rst_path, "w", encoding="utf-8") as f:
