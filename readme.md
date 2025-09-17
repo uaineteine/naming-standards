@@ -1,6 +1,20 @@
+
 # Naming Standards
 
 A validation package for database table and column names, providing standardized classes for validating and managing table names, column headers, and variable lists.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Features](#features)
+- [Usage](#usage)
+	- [Table Names](#table-names)
+	- [Column Names](#column-names)
+	- [NamedList](#namedlist)
+	- [ColList](#collist)
+- [Documentation Build Process](#documentation-build-process)
+- [Version](#version)
+
 
 ## Installation
 
@@ -123,6 +137,11 @@ other_vars = ["productid", "customerid"]
 overlap = valid_vars.overlap(other_vars)
 print(overlap)  # ColList(['customerid'])
 ```
+
+
+## Documentation Build Process
+
+See [docs/docsbuild.md](docs/docsbuild.md) for details on building the documentation with Sphinx, including pre-compilation, auto-modules, meta files, and the build process.
 
 ## Version
 
