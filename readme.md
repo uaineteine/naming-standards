@@ -1,6 +1,8 @@
 
 # Naming Standards
 
+[![Lint Check](https://github.com/uaineteine/naming-standards/actions/workflows/lint_check.yaml/badge.svg)](https://github.com/uaineteine/naming-standards/actions/workflows/lint_check.yaml) [![Dup Checks](https://github.com/uaineteine/naming-standards/actions/workflows/dup_checks.yaml/badge.svg)](https://github.com/uaineteine/naming-standards/actions/workflows/dup_checks.yaml) [![Package](https://github.com/uaineteine/naming-standards/actions/workflows/package.yaml/badge.svg)](https://github.com/uaineteine/naming-standards/actions/workflows/package.yaml)
+
 A validation package for database table and column names, providing standardized classes for validating and managing table names, column headers, and variable lists.
 
 ## Table of Contents
