@@ -28,14 +28,7 @@ Each approach provides the same event tracking and audit capabilities while offe
 Dependencies
 =========================
 
-* polars
-* pandas
-* pyspark
-* sas-to-polars
-* sparkpolars
-* uainepydat
-* pyvis
-* networkx
+* 
 
 
 
@@ -45,16 +38,11 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   transformslib_root
-   events
-   mapping
-   tables
-   transforms
 
 
 Release History
 =========================
 
 Version 1.0
-^^^^^^^^^^^^^
+^^^^^^^^^^^^
 * Release
