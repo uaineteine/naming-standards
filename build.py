@@ -6,8 +6,8 @@ import os
 #pre compile setup.py
 # generate_setup.py
 
-package_name = "transformslib"
-version = "0.13.0"
+package_name = "naming_standards"
+version = "1.0.0"
 author = ""
 author_email = ""
 url = ""
