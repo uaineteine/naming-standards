@@ -1,1 +1,1 @@
-A validation package for database table and column names, providing standardized classes for validating and managing table names, column headers, and variable lists.
+A validation package for database table and column names, providing standardised classes for validating and managing table names, column headers, and variable lists.
