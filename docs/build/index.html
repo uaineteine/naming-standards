@@ -18,8 +18,7 @@
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="colname" href="colname.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,12 +40,40 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="colname.html">colname</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lists.html">lists</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tablename.html">tablename</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Naming Standards</a></li>
+<li><a class="reference internal" href="#module-naming_standards.tablename">Contents</a><ul>
+<li><a class="reference internal" href="#naming_standards.tablename.Tablename"><code class="docutils literal notranslate"><span class="pre">Tablename</span></code></a><ul>
+<li><a class="reference internal" href="#naming_standards.tablename.Tablename.acceptable_format"><code class="docutils literal notranslate"><span class="pre">Tablename.acceptable_format()</span></code></a></li>
 </ul>
-
+</li>
+<li><a class="reference internal" href="#naming_standards.colname.Colname"><code class="docutils literal notranslate"><span class="pre">Colname</span></code></a><ul>
+<li><a class="reference internal" href="#naming_standards.colname.Colname.acceptable_format"><code class="docutils literal notranslate"><span class="pre">Colname.acceptable_format()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#naming_standards.lists.ColList"><code class="docutils literal notranslate"><span class="pre">ColList</span></code></a><ul>
+<li><a class="reference internal" href="#naming_standards.lists.ColList.acceptable_format"><code class="docutils literal notranslate"><span class="pre">ColList.acceptable_format()</span></code></a></li>
+<li><a class="reference internal" href="#naming_standards.lists.ColList.acceptable_format_check"><code class="docutils literal notranslate"><span class="pre">ColList.acceptable_format_check()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#naming_standards.lists.NamedList"><code class="docutils literal notranslate"><span class="pre">NamedList</span></code></a><ul>
+<li><a class="reference internal" href="#naming_standards.lists.NamedList.count"><code class="docutils literal notranslate"><span class="pre">NamedList.count</span></code></a></li>
+<li><a class="reference internal" href="#naming_standards.lists.NamedList.extend_with"><code class="docutils literal notranslate"><span class="pre">NamedList.extend_with()</span></code></a></li>
+<li><a class="reference internal" href="#naming_standards.lists.NamedList.overlap"><code class="docutils literal notranslate"><span class="pre">NamedList.overlap()</span></code></a></li>
+<li><a class="reference internal" href="#naming_standards.lists.NamedList.to_json"><code class="docutils literal notranslate"><span class="pre">NamedList.to_json()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#naming_standards.lists.auto_capitalise_list"><code class="docutils literal notranslate"><span class="pre">auto_capitalise_list()</span></code></a></li>
+<li><a class="reference internal" href="#naming_standards.lists.auto_lowercase_list"><code class="docutils literal notranslate"><span class="pre">auto_lowercase_list()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#release-history">Release History</a><ul>
+<li><a class="reference internal" href="#version-1-0">Version 1.0</a></li>
+</ul>
+</li>
+</ul>
+</div>
         </div>
       </div>
     </nav>
@@ -73,28 +100,212 @@
              
   <section id="naming-standards">
 <h1>Naming Standards<a class="headerlink" href="#naming-standards" title="Link to this heading"></a></h1>
-<p>A validation package for database table and column names, providing standardized classes for validating and managing table names, column headers, and variable lists.</p>
+<p>A validation package for database table and column names, providing standardised classes for validating and managing table names, column headers, and variable lists.</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
-<section id="contents">
-<h1>Contents<a class="headerlink" href="#contents" title="Link to this heading"></a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="colname.html">colname</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="colname.html#module-naming_standards.colname">naming_standards.colname</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="lists.html">lists</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="lists.html#module-naming_standards.lists">naming_standards.lists</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="tablename.html">tablename</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tablename.html#module-naming_standards.tablename">naming_standards.tablename</a></li>
-</ul>
-</li>
-</ul>
+<section id="module-naming_standards.tablename">
+<span id="contents"></span><h1>Contents<a class="headerlink" href="#module-naming_standards.tablename" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="naming_standards.tablename.Tablename">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">naming_standards.tablename.</span></span><span class="sig-name descname"><span class="pre">Tablename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#naming_standards.tablename.Tablename" title="Link to this definition"></a></dt>
+<dd><p>A specialised string class for validating and managing table names.</p>
+<p>This class extends str to enforce naming conventions for database table identifiers.</p>
+<p>Valid table names:
+- Must not be empty
+- Can be purely numeric (e.g., “123”)
+- Otherwise, must start with a letter or underscore
+- Must contain only alphanumeric characters and underscores</p>
+<dl>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Tablename</span><span class="p">(</span><span class="s2">&quot;my_table&quot;</span><span class="p">)</span>        <span class="c1"># Valid</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Tablename</span><span class="p">(</span><span class="s2">&quot;_private_table&quot;</span><span class="p">)</span>  <span class="c1"># Valid</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Tablename</span><span class="p">(</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>             <span class="c1"># Valid</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Tablename</span><span class="p">(</span><span class="s2">&quot;1table&quot;</span><span class="p">)</span>          <span class="c1"># Invalid</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Tablename</span><span class="p">(</span><span class="s2">&quot;table-name&quot;</span><span class="p">)</span>      <span class="c1"># Invalid</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Tablename</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>                <span class="c1"># Invalid</span>
+</pre></div>
 </div>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="naming_standards.tablename.Tablename.acceptable_format">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">acceptable_format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#naming_standards.tablename.Tablename.acceptable_format" title="Link to this definition"></a></dt>
+<dd><p>Validate the format of a table name.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>name (str): The table name to validate.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: True if valid, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class" id="module-naming_standards.colname">
+<dt class="sig sig-object py" id="naming_standards.colname.Colname">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">naming_standards.colname.</span></span><span class="sig-name descname"><span class="pre">Colname</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">header_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#naming_standards.colname.Colname" title="Link to this definition"></a></dt>
+<dd><p>A specialised string class for validating and managing column names.</p>
+<p>This class ensures header names:
+- Are not empty
+- Contain only lowercase letters, digits, and underscores
+- Have no spaces or other special characters</p>
+<dl>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Colname</span><span class="p">(</span><span class="s2">&quot;customer_name&quot;</span><span class="p">)</span>  <span class="c1"># Valid</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Colname</span><span class="p">(</span><span class="s2">&quot;order_123&quot;</span><span class="p">)</span>      <span class="c1"># Valid</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Colname</span><span class="p">(</span><span class="s2">&quot;CustomerName&quot;</span><span class="p">)</span>   <span class="c1"># Invalid (not all lowercase)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Colname</span><span class="p">(</span><span class="s2">&quot;ORDER DATE&quot;</span><span class="p">)</span>     <span class="c1"># Invalid (contains space)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Colname</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>               <span class="c1"># Invalid (empty)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="naming_standards.colname.Colname.acceptable_format">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">acceptable_format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#naming_standards.colname.Colname.acceptable_format" title="Link to this definition"></a></dt>
+<dd><p>Validate header name format.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>name (str): The header name to validate.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: True if valid, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class" id="module-naming_standards.lists">
+<dt class="sig sig-object py" id="naming_standards.lists.ColList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">naming_standards.lists.</span></span><span class="sig-name descname"><span class="pre">ColList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#naming_standards.lists.ColList" title="Link to this definition"></a></dt>
+<dd><p>A NamedList with additional validation for acceptable column name formats.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="naming_standards.lists.ColList.acceptable_format">
+<span class="sig-name descname"><span class="pre">acceptable_format</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#naming_standards.lists.ColList.acceptable_format" title="Link to this definition"></a></dt>
+<dd><p>Check if all items in the ColList are in an acceptable column name format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if all items are acceptable, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="naming_standards.lists.ColList.acceptable_format_check">
+<span class="sig-name descname"><span class="pre">acceptable_format_check</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#naming_standards.lists.ColList.acceptable_format_check" title="Link to this definition"></a></dt>
+<dd><p>Raise ValueError if any item in the ColList is not in an acceptable format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If any item is not in an acceptable format.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="naming_standards.lists.NamedList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">naming_standards.lists.</span></span><span class="sig-name descname"><span class="pre">NamedList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#naming_standards.lists.NamedList" title="Link to this definition"></a></dt>
+<dd><p>A list of strings with enforced lowercase and utility methods for name management.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="naming_standards.lists.NamedList.count">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#naming_standards.lists.NamedList.count" title="Link to this definition"></a></dt>
+<dd><p>Get the number of items in the NamedList.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Number of items.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="naming_standards.lists.NamedList.extend_with">
+<span class="sig-name descname"><span class="pre">extend_with</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#naming_standards.lists.NamedList" title="naming_standards.lists.NamedList"><span class="pre">NamedList</span></a></span></span><a class="headerlink" href="#naming_standards.lists.NamedList.extend_with" title="Link to this definition"></a></dt>
+<dd><p>Extend the NamedList with unique items from another list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – List of strings to add.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The updated NamedList instance.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#naming_standards.lists.NamedList" title="naming_standards.lists.NamedList">NamedList</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="naming_standards.lists.NamedList.overlap">
+<span class="sig-name descname"><span class="pre">overlap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#naming_standards.lists.NamedList.overlap" title="Link to this definition"></a></dt>
+<dd><p>Return a NamedList of items that overlap with another list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – List of strings to compare.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>NamedList of overlapping items.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#naming_standards.lists.NamedList" title="naming_standards.lists.NamedList">NamedList</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="naming_standards.lists.NamedList.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#naming_standards.lists.NamedList.to_json" title="Link to this definition"></a></dt>
+<dd><p>Serialize the NamedList to a JSON string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>JSON string with variable names.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="naming_standards.lists.auto_capitalise_list">
+<span class="sig-prename descclassname"><span class="pre">naming_standards.lists.</span></span><span class="sig-name descname"><span class="pre">auto_capitalise_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_of_strings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#naming_standards.lists.auto_capitalise_list" title="Link to this definition"></a></dt>
+<dd><p>Convert all strings in the input list to uppercase.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>list_of_strings</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – List of strings to convert.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of uppercased strings.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="naming_standards.lists.auto_lowercase_list">
+<span class="sig-prename descclassname"><span class="pre">naming_standards.lists.</span></span><span class="sig-name descname"><span class="pre">auto_lowercase_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_of_strings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#naming_standards.lists.auto_lowercase_list" title="Link to this definition"></a></dt>
+<dd><p>Convert all strings in the input list to lowercase.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>list_of_strings</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – List of strings to convert.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of lowercased strings.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="release-history">
 <h1>Release History<a class="headerlink" href="#release-history" title="Link to this heading"></a></h1>
@@ -109,9 +320,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="colname.html" class="btn btn-neutral float-right" title="colname" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

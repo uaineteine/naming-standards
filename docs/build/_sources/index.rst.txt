@@ -2,7 +2,7 @@
 Naming Standards
 =========================
 
-A validation package for database table and column names, providing standardized classes for validating and managing table names, column headers, and variable lists.
+A validation package for database table and column names, providing standardised classes for validating and managing table names, column headers, and variable lists.
 
 .. toctree::
    :maxdepth: 2
@@ -11,13 +11,16 @@ A validation package for database table and column names, providing standardized
 Contents
 =========================
 
-.. toctree::
-   :maxdepth: 2
 
-   colname
-   lists
-   tablename
 
+.. automodule:: naming_standards.tablename
+   :members:
+
+.. automodule:: naming_standards.colname
+   :members:
+
+.. automodule:: naming_standards.lists
+   :members:
 
 Release History
 =========================

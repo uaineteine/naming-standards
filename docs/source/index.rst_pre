@@ -12,8 +12,16 @@ Naming Standards
 Contents
 =========================
 
-<automodule>
-</automodule>
+
+
+.. automodule:: naming_standards.tablename
+   :members:
+
+.. automodule:: naming_standards.colname
+   :members:
+
+.. automodule:: naming_standards.lists
+   :members:
 
 Release History
 =========================
