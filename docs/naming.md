@@ -5,7 +5,7 @@
 The naming functionality is now available as a standalone package `naming-standards` (v1.0.0). Install it separately:
 
 ```bash
-pip install naming-standards
+pip install naming_standards
 ```
 
 Usage:

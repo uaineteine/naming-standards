@@ -12,7 +12,7 @@ A validation package for database table and column names, providing standardized
 ## Installation
 
 ```bash
-pip install naming-standards
+pip install naming_standards.tar.gz
 ```
 
 ## Usage
