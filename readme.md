@@ -21,7 +21,7 @@ A validation package for database table and column names, providing standardized
 ## Installation
 
 ```bash
-pip install naming_standards
+pip install naming_standards-1.0.0.tar.gz
 ```
 
 ## Features
